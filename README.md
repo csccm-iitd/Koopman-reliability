@@ -1,5 +1,4 @@
-# SAS-H-PCFE
-'Koopman operator for time-dependent reliabilty analysis'
+# 'Koopman operator for time-dependent reliabilty analysis
 The repository providespython codes for the numerical examples illustrated in the paper ‘Koopman operator for time-dependent reliabilty analysis’
 Please go through the paper to understand the implemented algorithm.
 Requirements:
