@@ -53,7 +53,7 @@ ff.train(model, data_1, data_2, num_epochs=500, shedule=True, criterion =nn.MSEL
 #%% Prediction
 predict2=[];
 for i in range(0,10000):
-   predict1= ff.prediction_data(torch.tensor(np.array(test_tr1)[i*100,:]))
+   predict1= ff.prediction_data(model,torch.tensor(np.array(test_tr1)[i*100,:]))
    predict1=np.array(predict1)
    predict2.append(predict1)
 #%%computing reliability
