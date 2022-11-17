@@ -68,7 +68,7 @@ ff.train(model, data_1, data_2, label_dt, num_epochs= 500, shedule=True, criteri
 #%% Prediction
 predict2=[];
 for i in range(0,10000):
-   predict1= ff.prediction_data(torch.tensor(np.array(test_tr1)[i*100,:]),torch.tensor(np.array(label_tr)[i*100:i*100+100,:]))
+   predict1= ff.prediction_data(model, torch.tensor(np.array(test_tr1)[i*100,:]),torch.tensor(np.array(label_tr)[i*100:i*100+100,:]))
    predict1=np.array(predict1)
    predict2.append(predict1)
 #%%computing reliability (failure probabilty)
