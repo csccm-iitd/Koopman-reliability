@@ -9,7 +9,7 @@ Requirements:
    ‘Duffing_var_ics’,‘Duffing_var_parameters’ and ‘Lorenz_ics’,‘Lorenz_var_parameters’.
 
 3. Add the data path to load the data and use the run file to execute.
-4. 
+4. If you find the cod helpful, please cite the paper.
 @article{navaneeth2022koopman,
   title={Koopman operator for time-dependent reliability analysis},
   author={Navaneeth, N and Chakraborty, Souvik},
