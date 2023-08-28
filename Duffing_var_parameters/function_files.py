@@ -87,7 +87,7 @@ def train(model, data_1, data_2, label_d, num_epochs, shedule=True, criterion =n
     for epoch in range(num_epochs):
         for (data1,data2, c11) in zip(data_1,data_2,label_d):
             output1, output2, output3 = model(data1.float(), c11.float())
-            loss = criterion(data2.float(), model.decode(model.koopman(model.encode(data1.float(),c11.float())),c11.float()))+ criterion(output2,model.koopman(output1.float()))+ criterion(data1.float(), model.decode(model.encode(data1.float(),c11.float()),c11.float()))
+            loss = criterion(data2.float(), model.decode(model.koopman(model.encode(data1.float(),c11.float())),c11.float()))+ criterion(model.decoder(data2),model.koopman(output1.float()))+ criterion(data1.float(), model.decode(model.encode(data1.float(),c11.float()),c11.float()))
             # ===================forward=====================
             optimizer.zero_grad() 
             loss.backward() 
