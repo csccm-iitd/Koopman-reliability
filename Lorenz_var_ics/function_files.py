@@ -52,7 +52,7 @@ def train(model, dataloader1, dataloader2, num_epochs, shedule=True, criterion =
         for (data1,data2) in zip(dataloader1,dataloader2):
               output1, output2, output3 = model(data1.float())
               loss = criterion( data2.float(), model.decoder(model.koopman(model.encoder(data1.float()))))+ \
-                  criterion(output2,model.koopman(output1))+ criterion(data1.float(), model.decoder(model.encoder(data1.float())))
+                  criterion(model.decoder(data2),model.koopman(output1))+ criterion(data1.float(), model.decoder(model.encoder(data1.float())))
               optimizer.zero_grad() 
               loss.backward()
               optimizer.step()
